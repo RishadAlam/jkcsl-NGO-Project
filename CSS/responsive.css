@@ -1,0 +1,363 @@
+
+@media (max-width: 575.98px) { 
+    .table .recent_collection::after
+    {
+        width: 130%;
+    }
+    .settings .table .recent_collection::after {
+        width: 100%;
+    }
+    .chart_heading h4 {
+        font-size: 18px !important;
+    }
+ }
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .fixed {
+        width: 100%;
+    }
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var(--primary_color);
+        -webkit-animation: spin .5s linear infinite;
+        animation: spin .5s linear infinite;
+}
+    #main .table {
+        margin-left: 0 !important;
+    }
+    .sidebar.close-btn 
+    {
+        width: 100%;
+        display: block;
+        z-index: 99999;
+        background-color: #004e92;
+    }
+    .sidebar 
+    {
+        width: 0%;
+        display: none;
+    }
+    .sidebar.close-btn nav ul li .menu-title,
+    .sidebar.close-btn .web_name h3 
+    {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+    .sidebar nav ul li .menu-title,
+    .sidebar .web_name h3 
+    {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .sidebar.close-btn nav ul li a 
+    {
+        justify-content: left;
+    }
+    .sidebar nav ul li a 
+    {
+        justify-content: center;
+    }
+    .sidebar nav ul li .menu-icon 
+    {
+        margin-right: 0;
+    }
+    .sidebar.close-btn nav ul li .menu-icon {
+        margin-right: 20px;
+    }
+
+    /* top Bar */
+    
+    .searchBox 
+    {
+        top: 200% !important;
+        left: -100px !important;
+        width: 300px !important;
+    }
+    .topbar .row .col-3
+    {
+        padding: 0;
+    }
+    #main .topbar .form .search
+    {
+        position: unset;
+        font-size: 24px;
+    }
+    .topbar .time
+    {
+        justify-content: center !important;
+    }
+    .topbar .row
+    {
+        justify-content: space-between;
+    }
+    #main .topbar .form,
+    #main .topbar .t_toggle
+    {
+        display: inline-block !important;
+        margin-right: 20px;
+        line-height: inherit;
+    }
+    #main .topbar .form
+    {
+        margin: 0;
+    }
+    #main .topbar .t_toggle span i
+    {
+        font-size: 36px;
+    }
+    .sidebar .close>#toggle,
+    #main .topbar .time #day,
+    #main .topbar .time #time,
+    #main .topbar .form .left-pan,
+    #main .topbar .form-input
+    {
+        display: none;
+    }
+    
+    .sidebar .close #m_toggle
+    {
+        display: block;
+        position: absolute;
+        top: -130px;
+        right: 15px;
+    }
+    #main .topbar .form:hover .form-input
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+        z-index: 999;
+        display: block;
+        color: var(--primary_color);
+    }
+    #main .topbar .form-input:focus
+    {
+        background: var(--primary-color-light);
+    }
+    #main .user .notification span {
+        margin-right: 10px;
+    }
+    #main .user .notification .num {
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        line-height: 16px;
+    }
+    #main .user .img {
+        width: 34px;
+        margin-left: 15px;
+    }
+    #main .topbar .user .dropdown>ul 
+    {
+        right: 5px;
+    }
+
+    /* Main */
+    #main .scrollbar {
+        overflow-x: hidden;
+    }
+    #main {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Table */
+    .table .recent_collection .dataTables_wrapper .dataTables_filter,
+    .table .recent_collection .dataTables_wrapper .dataTables_length
+    {
+        text-align: right;
+    }
+
+    /* footer */
+    .topbar .user,
+    .topbar,
+    .footer
+    {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .footer .col-md-6
+    {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+
+    /* Forms */
+    #main .savings_reg_form {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .form_heading>h2 {
+        font-size: 26px;
+    }
+}
+
+/* Apply styles for large devices */
+@media (min-width: 992px) and (max-width: 1199.98px) 
+{
+    /* Dashboard Cards */
+    #main .cards .card-body .middle .text h4 
+    {
+        font-size: 24px;
+    }
+    #main .cards .card-body .text .cvv h3, #main .cards .card-body .text.cvv h3 
+    {
+        font-size: 14px;
+    }
+    #main .cards .card-body .bottom .img {
+        margin-left: 0;
+    }
+
+    /* Table */
+    .table .row.recent_collection,
+    .table .row.recent_collection>.col-lg-12
+    {
+        padding: 0;
+        margin: 0;
+        padding-left: 5px !important;
+    }
+
+    /* Feild Page */
+    /* Feild Card */
+    .total_client .card .card_detail {
+        padding-left: 40px;
+    }
+    .total_client .card .card_detail .icon {
+        left: 5px;
+    }
+    .total_client .card .card_detail h4 {
+        font-size: 16px;
+    }
+    .total_client .card .card_detail .icon span i {
+        font-size: 22px;
+    }
+
+}
+
+/* Apply styles for Medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) 
+{
+    /* Sidebar */
+    .sidebar nav {
+        height: calc(100% - 30%);
+    }
+    .sidebar.close-btn 
+    {
+        width: 250px;
+    }
+    .sidebar 
+    {
+        width: 80px;
+        padding-left: 10px;
+    }
+    .sidebar.close-btn .close .toggle
+    {
+        right: -5%;
+    }
+    .sidebar.close-btn nav ul li .menu-title,
+    .sidebar.close-btn .web_name h3 
+    {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+    .sidebar nav ul li .menu-title,
+    .sidebar .web_name h3 
+    {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .sidebar.close-btn nav ul li a 
+    {
+        justify-content: left;
+    }
+    .sidebar nav ul li a 
+    {
+        justify-content: center;
+    }
+    .sidebar nav ul li .menu-icon 
+    {
+        margin-right: 0;
+    }
+    .sidebar.close-btn nav ul li .menu-icon {
+        margin-right: 20px;
+    }
+    .sidebar>.logo {
+        margin-left: -10px !important;
+    }
+
+    /* Top Bar */
+    .topbar .container-fluid
+    {
+        padding: 0;
+    }
+    .fixed {
+        width: calc(100% - 80px);
+    }
+
+    /* Main */
+    #main .scrollbar {
+        overflow-x: hidden;
+    }
+    .sidebar.close-btn ~ #main 
+    {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+    #main {
+        left: 80px;
+        width: calc(100% - 80px);
+    }
+
+    /* footer */
+    .footer p, .footer a
+    {
+        font-size: 14px;
+    }
+
+    /* Feild Page */
+    /* Feild Card */
+    .total_client .card .card_detail {
+        padding-left: 80px;
+    }
+    .total_client .card .card_detail .icon {
+        left: 30px;
+    }
+}
+
+ /* Apply styles large devices */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    #main .cards .card-body .text .cvv h4, #main .cards .card-body .text.cvv h4 
+    {
+        font-size: 10px;
+    }
+    #main .cards .card-body .bottom .img:last-child 
+    {
+        width: 30px;
+    }
+    #main .cards .card-body .text .cvv h3, #main .cards .card-body .text.cvv h3 
+    {
+        font-size: 14px;
+    }
+    #main .cards .card-body .middle .img 
+    {
+        max-width: 40px;
+    }
+    #main .cards .card-body .middle .text h4 
+    {
+        font-size: 24px;
+    }
+ }
