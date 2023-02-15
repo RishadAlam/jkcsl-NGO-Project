@@ -325,6 +325,10 @@ $end =  date('H:i', strtotime($timeEnd));
                 </a></li>
             <?php
             if (!$_SESSION['auth']['user_role']) { ?>
+                <li><a class="<?= $page == 'khelapi-field-report.php' ? 'active' : '' ?>" href="<?= baseUrl('khelapi-field-report') ?>">
+                        <span class="menu-icon"><i class='bx bxl-deviantart'></i></span>
+                        <span class="menu-title">খেলাপি রিপোর্ট</span>
+                    </a></li>
                 <li><a class="<?= $page == 'fdr.php' ? 'active' : '' ?>" href="<?= baseUrl('fdr') ?>">
                         <span class="menu-icon"><i class='bx bx-coin-stack'></i></span>
                         <span class="menu-title">এফ ডি আর</span>

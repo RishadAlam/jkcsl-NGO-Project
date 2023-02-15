@@ -676,12 +676,31 @@ class FieldDataController
             }
         }
 
-        $sql = $this->conn->prepare("DELETE FROM loan_profiles WHERE loan_profile_id = $id");
+        $sql = $this->conn->prepare("DELETE FROM loan_acc_checks WHERE loan_profile_id = $id");
         $sql->execute();
 
-        if ($sql->rowCount()) {
-            $this->conn->commit();
-            return true;
+        if ($sql->rowCount() == 0) {
+            $this->conn->rollback();
+            return false;
+            die();
+        }
+
+        $nominee_img_sql = $this->conn->prepare("SELECT nominee_img FROM loan_profiles WHERE loan_profile_id = $id");
+        $nominee_img_sql->execute();
+        $nominee_img = $nominee_img_sql->fetchALL(PDO::FETCH_ASSOC);
+        $nominee_image = $nominee_img[0]['nominee_img'];
+
+        if (unlink('../img/' . $nominee_image)) {
+            $sql = $this->conn->prepare("DELETE FROM loan_profiles WHERE loan_profile_id = $id");
+            $sql->execute();
+
+            if ($sql->rowCount()) {
+                $this->conn->commit();
+                return true;
+            } else {
+                $this->conn->rollback();
+                return false;
+            }
         } else {
             $this->conn->rollback();
             return false;
@@ -723,12 +742,31 @@ class FieldDataController
             }
         }
 
-        $sql = $this->conn->prepare("DELETE FROM saving_profiles WHERE saving_profiles_id = $id");
+        $sql = $this->conn->prepare("DELETE FROM loan_acc_checks WHERE saving_profiles_id = $id");
         $sql->execute();
 
-        if ($sql->rowCount()) {
-            $this->conn->commit();
-            return true;
+        if ($sql->rowCount() == 0) {
+            $this->conn->rollback();
+            return false;
+            die();
+        }
+
+        $nominee_img_sql = $this->conn->prepare("SELECT nominee_img FROM saving_profiles WHERE saving_profiles_id = $id");
+        $nominee_img_sql->execute();
+        $nominee_img = $nominee_img_sql->fetchALL(PDO::FETCH_ASSOC);
+        $nominee_image = $nominee_img[0]['nominee_img'];
+
+        if (unlink('../img/' . $nominee_image)) {
+            $sql = $this->conn->prepare("DELETE FROM saving_profiles WHERE saving_profiles_id = $id");
+            $sql->execute();
+
+            if ($sql->rowCount()) {
+                $this->conn->commit();
+                return true;
+            } else {
+                $this->conn->rollback();
+                return false;
+            }
         } else {
             $this->conn->rollback();
             return false;
@@ -893,11 +931,20 @@ class FieldDataController
             die();
         }
 
-        $sql = $this->conn->prepare("DELETE FROM client_registers WHERE client_id = $id");
-        $sql->execute();
+        $client_img_sql = $this->conn->prepare("SELECT client_img FROM client_registers WHERE client_id = $id");
+        $client_img_sql->execute();
+        $client_img = $client_img_sql->fetchALL(PDO::FETCH_ASSOC);
+        $client_image = $client_img[0]['client_img'];
 
-        if ($sql->rowCount()) {
-            return true;
+        if (unlink('../img/' . $client_image)) {
+            $sql = $this->conn->prepare("DELETE FROM client_registers WHERE client_id = $id");
+            $sql->execute();
+
+            if ($sql->rowCount()) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
