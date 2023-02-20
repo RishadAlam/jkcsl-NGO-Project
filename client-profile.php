@@ -841,7 +841,7 @@ include "include/footer.php";
                                 }
                             },
                             error: function(data) {
-                                consol.log(data)
+                                console.log(data)
                                 swal.fire({
                                     title: "দুঃখিত",
                                     text: "সঞ্চয় প্রোফাইল ডিলিট হয়নি",
@@ -902,7 +902,7 @@ include "include/footer.php";
                                 }
                             },
                             error: function(data) {
-                                consol.log(data)
+                                console.log(data)
                                 swal.fire({
                                     title: "দুঃখিত",
                                     text: "ঋণ প্রোফাইল ডিলিট হয়নি",
@@ -1049,7 +1049,7 @@ include "include/footer.php";
                             }
                         },
                         error: function(data) {
-                            consol.log(data)
+                            console.log(data)
                             swal.fire({
                                 title: "দুঃখিত",
                                 text: "রেজিস্টার ডিলিট হয়নি",

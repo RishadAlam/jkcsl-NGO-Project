@@ -742,7 +742,7 @@ class FieldDataController
             }
         }
 
-        $sql = $this->conn->prepare("DELETE FROM loan_acc_checks WHERE saving_profiles_id = $id");
+        $sql = $this->conn->prepare("DELETE FROM savings_acc_checks WHERE saving_profiles_id = $id");
         $sql->execute();
 
         if ($sql->rowCount() == 0) {
