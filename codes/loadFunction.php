@@ -563,7 +563,7 @@ if (isset($_POST['load_collection_id'])) {
                         <div class="col-md-6 mb-3">
                             <label for="interest" class="pb-2">লাভ (টাকা)</label>
                             <input type="number" class="form-control form-input p-3" style="text-indent: 5px;" id="interest" value="' . $row['interest'] . '"';
-            if ($_SESSION['auth']['user_role'] != 0) {
+            if ($_SESSION['auth']['user_role'] != '0') {
                 $output .=     'disabled';
             }
 
